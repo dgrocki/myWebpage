@@ -10,11 +10,11 @@ import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
-import logo from './logo.svg';
 import MediaCard from './MediaCard'
 import './App.css';
 import LinkButton from "./LinkButton"
 import About from "./About"
+import Contact from "./Contact"
 
 const styles = {
   card: {
@@ -27,21 +27,24 @@ const styles = {
 };
 
 const Index = () => <h2>Home</h2>;
-const Contact = () => <h2>Users</h2>;
+const Resume= () => <h2>Users</h2>;
+const Projects = () => <h2>Users</h2>;
 const AppRouter = () => (
 <div>
   <Router>
     <div>
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar style ={{}}>
             <div style={{ flexGrow: "1", float: "left" }}>Welcome</div>
-            <LinkButton to='/'>Home</LinkButton>
+            <LinkButton to='/' style={{color: "white"}}>Home</LinkButton>
             <LinkButton to='/about'>About</LinkButton>
             <LinkButton to='/contact'>Contact</LinkButton>
           </Toolbar>
         </AppBar>
       <Route path="/" exact component={Index} />
       <Route path="/about/" component={About} />
+      <Route path="/projects/" component={Projects} />
+      <Route path="/resume/" component={Resume} />
       <Route path="/contact/" component={Contact} />
       </div>
   </Router>

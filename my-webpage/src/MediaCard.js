@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -19,8 +19,12 @@ const styles = {
   },
 };
 
-function ImgMediaCard(props) {
-  const { classes } = props;
+class ImgMediaCard extends Component {
+  constructor(props){
+    super(props)
+  }
+render(){
+  const {classes, imgSrc} = this.props
   return (
     <Card className={classes.card}>
         <CardMedia
@@ -29,13 +33,13 @@ function ImgMediaCard(props) {
           alt="Contemplative Reptile"
           className={classes.media}
           height="300"
-          src={require("./Daniel_Grocki.jpg")}
+          src={imgSrc}
           title="Contemplative Reptile"
         />
     </Card>
   );
 }
-
+}
 ImgMediaCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
