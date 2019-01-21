@@ -10,9 +10,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const styles = {
-  card: {
-    maxWidth: 345,
-  },
   media: {
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
@@ -26,15 +23,12 @@ class ImgMediaCard extends Component {
 render(){
   const {classes, imgSrc} = this.props
   return (
-    <Card className={classes.card}>
+    <Card style={{minWidth: "400px"}}>
         <CardMedia
         styles={{height: 0, paddingTop: '56%'}}
           component="img"
-          alt="Contemplative Reptile"
           className={classes.media}
-          height="300"
           src={imgSrc}
-          title="Contemplative Reptile"
         />
     </Card>
   );

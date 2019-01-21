@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import React, { Component } from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar'
@@ -15,6 +15,7 @@ import './App.css';
 import LinkButton from "./LinkButton"
 import About from "./About"
 import Contact from "./Contact"
+import Resume from "./Resume"
 
 const styles = {
   card: {
@@ -27,21 +28,21 @@ const styles = {
 };
 
 const Index = () => <h2>Home</h2>;
-const Resume= () => <h2>Users</h2>;
 const Projects = () => <h2>Users</h2>;
 const AppRouter = () => (
 <div>
   <Router>
     <div>
-        <AppBar position="static">
+        <AppBar position="sticky" style={{backgroundColor: "#40abf7"}}>
           <Toolbar style ={{}}>
-            <div style={{ flexGrow: "1", float: "left" }}>Welcome</div>
-            <LinkButton to='/' style={{color: "white"}}>Home</LinkButton>
-            <LinkButton to='/about'>About</LinkButton>
-            <LinkButton to='/contact'>Contact</LinkButton>
+            <div style={{ flexGrow: "1", float: "left", fontSize: "25px", color: "white" }}>Daniel Grocki</div>
+            <LinkButton to='/about'style={{color: "white"}}>About</LinkButton>
+            <LinkButton to='/resume'style={{color: "white"}}>Resume</LinkButton>
+            <LinkButton to='/contact'style={{color: "white"}}>Contact</LinkButton>
           </Toolbar>
         </AppBar>
       <Route path="/" exact component={Index} />
+      <Redirect from="/" to="/about" />
       <Route path="/about/" component={About} />
       <Route path="/projects/" component={Projects} />
       <Route path="/resume/" component={Resume} />

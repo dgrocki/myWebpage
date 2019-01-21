@@ -5,14 +5,14 @@ import ImgButton from './ImgButton';
 class Contact extends Component {
     render() {
         return (
-            <div>
-                <Card>
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                <Card style={{display: "flex", width:"100%", justifyContent: "center"}}>
                     <CardContent>
-                        Contact Me Here
+                        <span style={{fontSize: "30px"}}>Contact Me Here</span>
                     </CardContent>
                 </Card>
 
-                <Card style={{ justifyContent: "center" }}>
+                <Card style={{display: "flex", width:"100%", justifyContent: "center"}}>
                     <a href="https://github.com/dgrocki">
                         <ImgButton imgSrc={require("./img/GitHub-Mark.svg")}></ImgButton>
                     </a>
