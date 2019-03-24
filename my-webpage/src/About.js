@@ -171,7 +171,7 @@ class About extends Component {
                 
               </div>
               <ul>
-                <li style={{fontSize: "20px", margin: "15px"}}>Designed and Created front end code using ReactJS</li>
+                <li style={{fontSize: "20px", margin: "15px"}}>Designed and created front end code using ReactJS</li>
                 <li style={{fontSize: "20px", margin: "15px"}}>Implemented Redux to manage state and API communication in a React App</li>
                 <li style={{fontSize: "20px", margin: "15px"}}>Created HTTP endpoints for in C# for CRUD operations</li>
                 <li style={{fontSize: "20px", margin: "15px"}}>Created database schemas in PostgreSQL and connected it to API</li>
@@ -193,7 +193,7 @@ class About extends Component {
             </div>
             <div style={{margin: "10px", width: "100%"}}>
               <div style={{display: "flex", justifyContent: "center"}}>
-                <h2 style={{fontSize: "30px"}} >Applicaiton Development</h2>
+                <h2 style={{fontSize: "30px"}} >Application Development</h2>
                 
               </div>
               <ul>
