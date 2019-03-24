@@ -1,0 +1,19 @@
+.noTextHighlight {
+    -webkit-user-select: none; /* Webkit */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10  */
+    /* Currently not supported in Opera but will be soon */
+    -o-user-select: none;
+    user-select: none;
+    }
+    .ripple {
+      background-position: center;
+      transition: background 0.8s;
+    }
+    .ripple:hover {
+      background:  radial-gradient(circle, rgba(0,0,0,0) 1%, rgba(95, 95, 95, 0.35)1% ) center/15000%;
+    }
+    .ripple:active {
+      background-size: 100%;
+      transition: background 0s;
+    }
