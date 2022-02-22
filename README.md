@@ -7,6 +7,9 @@ https://devonstank.com/my-work/elementary-coffee-co
 
 Color Scheme:
 
+https://coolors.co/687864-718c6b-31708e-8fc1e3-f7f9fb
+https://coolors.co/844d36-474853-aaa0a0-86b3d1-8e8268
+
 - #844D36
 #474853
 #86B3D1
