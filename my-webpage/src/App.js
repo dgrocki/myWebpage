@@ -33,14 +33,14 @@ const AppRouter = () => (
 <div>
   <Router>
     <div>
-        <AppBar position="sticky" style={{backgroundColor: "#40abf7"}}>
+       {/*} <AppBar position="sticky" style={{backgroundColor: "#40abf7"}}>
           <Toolbar style ={{}}>
             <div style={{ flexGrow: "1", float: "left", fontSize: "25px", color: "white" }}>Daniel Grocki</div>
             <LinkButton to='/about'style={{color: "white"}}>About</LinkButton>
             <LinkButton to='/resume'style={{color: "white"}}>Resume</LinkButton>
             <LinkButton to='/contact'style={{color: "white"}}>Contact</LinkButton>
           </Toolbar>
-        </AppBar>
+        </AppBar> */}
       <Route path="/" exact component={Index} />
       <Redirect from="/" to="/about" />
       <Route path="/about/" component={About} />

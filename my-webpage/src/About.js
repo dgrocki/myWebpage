@@ -16,6 +16,8 @@ import TechnologyText from "./TechnologyText"
 import Expand from 'react-expand-animated';
 import ExpandMenu from './ExpandMenu';
 import ParallaxScroll from './ParallaxScroll';
+import ShadowedImage from './ShadowedImage'
+import ImageContainer from './ImageContainer'
 
 
 const styles = {
@@ -83,7 +85,7 @@ class About extends Component {
         </header>
 
         <div style={{ position: "relative" }}>
-          <ParallaxScroll imgSrc={require("./img/20161221_162743.jpg")} viewPort="92vh" imgHeight="1100px"></ParallaxScroll>
+          <ParallaxScroll imgSrc={require("./img/20161221_162743.jpg")} viewPort="100vh"></ParallaxScroll>
           <div style={{
             backgroundColor: "rgba(0, 0, 0, 0)",
             position: "absolute",
@@ -91,8 +93,10 @@ class About extends Component {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "92vh", //match the height of parallax scroll
-            width: "100%"
+            height: "100vh", //match the height of parallax scroll
+            width: "100%",
+            backgroundSize: "cover"
+
 
           }}>
             <div
@@ -135,17 +139,8 @@ class About extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
         <div style={{ position: "relative" }}>
-          <ParallaxScroll imgSrc={require("./img/20161221_152625.jpg")} viewPort="40vh" imgHeight="1100px"></ParallaxScroll>
+          <ParallaxScroll imgSrc={require("./img/20161221_152625.jpg")} viewPort="40vh" imgHeight="1100px" width="100vw"></ParallaxScroll>
           <div style={{
             backgroundColor: "rgba(0, 0, 0, 0)",
             position: "absolute",
@@ -160,6 +155,54 @@ class About extends Component {
             <h1 style={{ zIndex: "2", color: "white", fontSize: "40px" }}>Skills</h1>
           </div>
         </div>
+
+        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#ABA2A2" }}>
+
+          <div style={{ padding: "30px", marginBottom: "150px", width: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#787B5A" }}>
+            <h1 style={{ fontSize: "65px" }}>Containerization for HP</h1>
+          </div>
+
+          <div style={{ display: "flex", padding: "20px", width: "100%", justifyContent: "center", backgroundColor: "#ABA2A2" }}>
+            
+            {/*<div style={{flexDirection: "column", alignItems: "center", marginRight: "5%",whiteSpace: "pre-line", padding: "20px 40px 10px 40px", display: "flex", justifyContent: "center", fontSize: "20px", marginLeft: "16%", border: "10px solid #934A2B" }}>*/}
+            <div style={{whiteSpace: "pre-line", fontSize: "20px", flex: "1", margin: "0px 5% 0px 15%"}}>
+              <h2 style={{fontSize: "40px"}}>Awesome Docker Shit</h2>
+              <hr style={{backgroundColor: "#86B3D1", height: "3px", border: "none"}}></hr>
+              <p>
+                {`Lorem ipsum dolor sit amet. Sed commodi eius non autem molestiae ut tenetur fugit est atque fuga aut dolor delectus. Sed quia voluptatem ex ipsum rerum ab rerum labore perspiciatis earum qui dolorem molestiae ea suscipit mollitia.Ut quae optio eum distinctio dicta rem atque minus At incidunt impedit. Nam dolorem nihil At quis dolor vel soluta ducimus. Cum aliquam debitis vel excepturi laudantium qui maxime assumenda non dolorem quisquam.`}
+              </p>
+            </div>
+          
+            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px calc(15% + 15px) 0px 5%"}}>
+
+              <ImageContainer top="-15px" left="15px" style={{flex: "1"}}></ImageContainer>
+
+            </div>
+          </div>
+        </Card>
+
+
+
+        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#ABA2A2" }}>
+
+          <div style={{ display: "flex", padding: "20px", width: "100%", justifyContent: "center", backgroundColor: "#ABA2A2" }}>
+            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px 5% 0px calc(15% + 15px)"}}>
+
+              <ImageContainer top="15px" left="-15px" style={{flex: "1"}}></ImageContainer>
+
+            </div>
+            
+            {/*<div style={{flexDirection: "column", alignItems: "center", marginRight: "5%",whiteSpace: "pre-line", padding: "20px 40px 10px 40px", display: "flex", justifyContent: "center", fontSize: "20px", marginLeft: "16%", border: "10px solid #934A2B" }}>*/}
+            <div style={{whiteSpace: "pre-line", fontSize: "20px", flex: "1", margin: "0px 15% 0px 5%"}}>
+              <h2 style={{fontSize: "40px"}}>Awesome Docker Shit</h2>
+              <hr style={{backgroundColor: "#86B3D1", height: "3px", border: "none"}}></hr>
+              <p>
+                {`Lorem ipsum dolor sit amet. Sed commodi eius non autem molestiae ut tenetur fugit est atque fuga aut dolor delectus. Sed quia voluptatem ex ipsum rerum ab rerum labore perspiciatis earum qui dolorem molestiae ea suscipit mollitia.Ut quae optio eum distinctio dicta rem atque minus At incidunt impedit. Nam dolorem nihil At quis dolor vel soluta ducimus. Cum aliquam debitis vel excepturi laudantium qui maxime assumenda non dolorem quisquam.`}
+              </p>
+            </div>
+          
+          </div>
+        </Card>
 
 
           <div style={{
@@ -230,7 +273,7 @@ class About extends Component {
 
 
         <div style={{ position: "relative", marginTop: "40vh" }}>
-          <ParallaxScroll imgSrc={require("./img/20170529_084457.jpg")} viewPort="40vh" imgHeight="1100px"></ParallaxScroll>
+          <ParallaxScroll imgSrc={require("./img/20170529_084457.jpg")} viewPort="40vh" imgHeight="1100px" width="100vw"></ParallaxScroll>
           <div style={{
             backgroundColor: "rgba(0, 0, 0, 0)",
             position: "absolute",

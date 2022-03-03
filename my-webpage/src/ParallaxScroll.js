@@ -7,7 +7,7 @@ class ParallaxScroll extends Component {
         super(props)
     }
     render() {
-        const {imgSrc, viewPort, imgHeight, strength, pt}  = this.props
+        const {imgSrc, viewPort, imgHeight, strength, pt, width}  = this.props
         return (
             <div>
 
@@ -20,7 +20,7 @@ class ParallaxScroll extends Component {
 
 
                         <div >
-                            <img style={{ maxHeight: imgHeight, minWidth: "100%", paddingTop: pt||"0px"}}
+                            <img style={{ maxHeight: imgHeight, width: width, paddingTop: pt||"0px"}}
 
                                 src={imgSrc}
                             />

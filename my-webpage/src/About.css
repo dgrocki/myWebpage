@@ -3,3 +3,29 @@
     overflow: hidden;
     transition: all .5s ease;
 }
+body{
+  font-family: 'Oxygen', sans-serif;
+}
+#container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  border: 1px solid black
+}
+#text{
+  font-size: 13px;
+  width: 50vw;
+  text-align: justify;
+}
+#absolute{
+  position: absolute;
+  bottom: 5px;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  color: red;
+}
