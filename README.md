@@ -28,5 +28,16 @@ https://coolors.co/844d36-474853-aaa0a0-86b3d1-8e8268
 #83677B
 #ADADAD
 
-
+## TODO
+- CSS fixes
+  - Card Border radius
+- Lazy image loading
+- Content
+- Refactor to reusable objects
+- Refactor CSS off of individual objects
+- Buildpipeline
+  - Travis
+  - DockerFile
+  - Watchtower
+- Responsive size for phones
 
