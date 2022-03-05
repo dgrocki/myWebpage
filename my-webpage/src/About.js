@@ -18,7 +18,45 @@ import ExpandMenu from './ExpandMenu';
 import ParallaxScroll from './ParallaxScroll';
 import ShadowedImage from './ShadowedImage'
 import ImageContainer from './ImageContainer'
+import ProfilePhoto from "./img/one.jpg";
+import LayoutImageButton from './LayoutImageButton.js';
+import ImageLayout from './ImageLayout'
+import { styled } from '@mui/material/styles';
+import ButtonBase from '@mui/material/ButtonBase';
+import SImage from "./img/20220206_163151.jpg";
+import TextboxImageOverlay from './CardSections/TextboxImageOverlay.js'
+import ImageFadeIn from "react-image-fade-in"
+import Forest from "./img/Forest.jpg";
+import Thor from "./img/Thor.jpg"
+import Ski from "./img/povski2.jpg"
 
+
+const ImageButton = styled(ButtonBase)(({ theme }) => ({
+  position: 'relative',
+  [theme.breakpoints.down('sm')]: {
+    width: '100% !important', // Overrides inline-style
+  },
+  '&:hover, &.Mui-focusVisible': {
+    zIndex: 1,
+    '& .MuiImageBackdrop-root': {
+      opacity: 0.15,
+    },
+    '& .MuiImageMarked-root': {
+      opacity: 0,
+    },
+    '& .MuiTypography-root': {
+      border: '4px solid currentColor',
+    },
+  },
+}));
+
+const Spacer = styled(Card)({
+  height: "10vh",
+  backgroundColor: "rgba(0, 0, 0, 0)",
+  borderRadius: 0,
+  boxShadow: "none"
+
+})
 
 const styles = {
   card: {
@@ -114,27 +152,14 @@ class About extends Component {
         </div>
 
 
-
-        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div style={{ padding: "30px" }}>
-            <h1 style={{ fontSize: "40px" }}>Who am I</h1>
+        <Card style = {{backgroundColor: "#787B5A", padding: "0% 0% 10% 0%"}}>
+          <div style={{display: "flex", justifyContent: "center", padding: "30px" }}>
+              <h1 style={{ fontSize: "calc(1.62vw + 12px)" }}>Who am I</h1>
           </div>
-          <div style={{ display: "flex", padding: "20px", width: "100%", justifyContent: "center" }}>
-            <div style={{ flex: "2", display: "flex", justifyContent: "center", padding: "20px 20px 10px 10px", height: "100%" }}>
-              <div style={{ minWidth: "350px" }}>
-                {/*<MediaCard style ={{width: "100%", height: "100%", display: "inlineBlock"}} imgSrc={require("./img/Home_img1.jpeg")}></MediaCard>
-                            */}
-                <img style={{ maxWidth: "100%" }} src={require("./img/Daniel_Grocki.jpg")}></img>
-              </div>
-            </div>
-            <div style={{ flex: "3", padding: "20px 40px 10px 40px", display: "flex", justifyContent: "center", fontSize: "20px" }}>
-              I am a motivated Computer Science major at Oregon State University with a passion for knowledge.
-              I also have a Math minor since I enjoy problem solving and mathematical logic. My major interests include Docker, full stack development, and application development.
-              After working at CDK Global as an intern doing full stack development, I found that I really enjoyed doing this. I like the challenge of making all the different parts of a website work together and I also like knowing how everything works.
-              I have always had an interest in Docker and have strived to learn more about it despite the lack of classes covering the material. I have gone out of my way to learn this technology and find projects to work on that incorporate it. For example, my senior project for HP involved using Docker to help cut down on resource usage on their printing servers.
+          <TextboxImageOverlay image={SImage}></TextboxImageOverlay>
+          <Spacer></Spacer>
+          <TextboxImageOverlay image={SImage} reverse={true}></TextboxImageOverlay>
 
-        </div>
-          </div>
         </Card>
 
 
@@ -152,15 +177,17 @@ class About extends Component {
             width: "100%"
 
           }}>
-            <h1 style={{ zIndex: "2", color: "white", fontSize: "40px" }}>Skills</h1>
+            <h1 style={{ zIndex: "2", color: "white", fontSize: "60px" }}>How I Got Here</h1>
           </div>
         </div>
 
-        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#ABA2A2" }}>
+        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#ABA2A2", paddingTop: "50px" }}>
 
+          {/*
           <div style={{ padding: "30px", marginBottom: "150px", width: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#787B5A" }}>
             <h1 style={{ fontSize: "65px" }}>Containerization for HP</h1>
           </div>
+          */}
 
           <div style={{ display: "flex", padding: "20px", width: "100%", justifyContent: "center", backgroundColor: "#ABA2A2" }}>
             
@@ -173,7 +200,7 @@ class About extends Component {
               </p>
             </div>
           
-            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px calc(15% + 15px) 0px 5%"}}>
+            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px calc(15% + 15px) 0px 5%", lineHeight: "0px"}}>
 
               <ImageContainer top="-15px" left="15px" style={{flex: "1"}}></ImageContainer>
 
@@ -186,7 +213,7 @@ class About extends Component {
         <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#ABA2A2" }}>
 
           <div style={{ display: "flex", padding: "20px", width: "100%", justifyContent: "center", backgroundColor: "#ABA2A2" }}>
-            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px 5% 0px calc(15% + 15px)"}}>
+            <div style={{flex:"1", display: "flex", justifyContent: "center", margin: "0px 5% 0px calc(15% + 15px)", lineHeight: "0px"}}>
 
               <ImageContainer top="15px" left="-15px" style={{flex: "1"}}></ImageContainer>
 
@@ -202,8 +229,78 @@ class About extends Component {
             </div>
           
           </div>
+          <Spacer></Spacer>
+          <Spacer></Spacer>
         </Card>
 
+
+        <div style={{ position: "relative" }}>
+          <ParallaxScroll imgSrc={require("./img/20170529_084457.jpg")} viewPort="40vh" imgHeight="2100px" width="100vw"></ParallaxScroll>
+          <div style={{
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            position: "absolute",
+            top: "0px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "40vh", //match the height of parallax scroll
+            width: "100%"
+
+          }}>
+            <h1 style={{ zIndex: "2", color: "white", fontSize: "40px" }}>Passions</h1>
+          </div>
+        </div>
+
+        <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#8E8268" }}>
+
+          <Spacer></Spacer>
+
+          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignContent: "space-around"}}>
+            <Card className='container'>
+              <ImageButton>
+                <img className="image-hover" src={Ski} alt="Me" />
+                <div class="overlay">
+                  <div class="text">Skiing</div>
+                </div>
+              </ImageButton>
+
+            </Card>
+            <Card className='container'>
+              <ImageButton>
+                <img className="image-hover" src={ProfilePhoto} alt="Me" />
+                <div class="overlay">
+                  <div class="text">Technology</div>
+                </div>
+              </ImageButton>
+
+            </Card>
+            <Card className='container'> 
+              <ImageButton>
+                <img className="image-hover" src={Thor} alt="Me" />
+                <div class="overlay">
+                  <div class="text">Outdoors</div>
+                </div>
+              </ImageButton>
+
+            </Card>
+            <Card className='container'>
+              <ImageButton>
+                <img className="image-hover" src={Forest} alt="Me" />
+                <div class="overlay">
+                  <div class="text">Environment</div>
+                </div>
+              </ImageButton>
+
+            </Card>
+          </div>
+
+        </Card>
+
+
+        <Card>
+          <ImageLayout></ImageLayout>
+
+        </Card>
 
           <div style={{
               display: "flex",
@@ -309,9 +406,6 @@ class About extends Component {
 
 
 
-        <Card
-          style={{ height: "50vh" }}
-        ></Card>
 
       </div>
     );

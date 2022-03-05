@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react';
 import React, { Component, useState } from 'react';
+import ImageFadeIn from "react-image-fade-in"
+import Grow from '@mui/material/Grow';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+import Thor from "./img/Thor.jpg"
 
 import ProfilePhoto from "./img/one.jpg";
 
@@ -39,9 +44,10 @@ class ImageContainer extends Component{
   `
     return (
       <div css={styling} >
-        <img src={ProfilePhoto} alt="Me" />
-
-        <div className="img-border border-2"></div>
+        <ScrollAnimation animateIn="animate__zoomIn" duration={.2} animateOnce={true}>
+          <img src={ProfilePhoto} alt="Me" />
+          <div className="img-border border-2"></div>
+        </ScrollAnimation>
       </div>
     )
   }

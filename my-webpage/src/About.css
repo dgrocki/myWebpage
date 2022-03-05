@@ -29,3 +29,51 @@ body{
   text-align: center;
   color: red;
 }
+
+
+.image-hover{
+  width: 41vw;
+  min-width: 300px;
+}
+.container {
+  line-height: 0px;
+  position: relative;
+  margin: 0% 0% 4% 0%;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #707070;
+
+}
+
+.container:hover .overlay {
+  opacity: .8;
+}
+
+.text {
+  color: white;
+  font-size: calc(1.52vw + 20px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
